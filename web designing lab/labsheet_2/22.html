@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Newsletter</title>
+
+<style>
+.box {
+    width: 350px;
+    margin: 50px auto;
+}
+
+.field {
+    position: relative;
+    margin-top: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    transition: 0.3s;
+    background: white;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Newsletter Subscription</h2>
+
+    <div class="field">
+        <input type="email" id="email" placeholder=" ">
+        <label for="email">Email Address</label>
+    </div>
+
+    <button>Subscribe</button>
+
+</div>
+
+</body>
+</html>

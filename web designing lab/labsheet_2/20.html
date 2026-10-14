@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Onboarding Form</title>
+
+<style>
+.step {
+    padding: 20px;
+    border: 1px solid gray;
+    width: 400px;
+}
+
+#step2 {
+    display: none;
+}
+</style>
+
+<script>
+function nextStep() {
+    document.getElementById("step1").style.display = "none";
+    document.getElementById("step2").style.display = "block";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="step">
+
+    <div id="step1">
+        <h2>Step 1</h2>
+
+        <input type="text" placeholder="Enter Name">
+
+        <br><br>
+
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div id="step2">
+        <h2>Step 2</h2>
+
+        <input type="email" placeholder="Enter Email">
+
+        <br><br>
+
+        <button>Finish</button>
+    </div>
+
+</div>
+
+</body>
+</html>

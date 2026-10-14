@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+
+<style>
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.form, .location {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="form">
+        <h2>Contact Us</h2>
+
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+
+        <br>
+        <button>Send Message</button>
+    </div>
+
+    <div class="location">
+        <h2>Our Location</h2>
+        <p>ABC Company</p>
+        <p>Dehradun, Uttarakhand</p>
+        <p>India</p>
+        <p>Phone: 9876543210</p>
+    </div>
+
+</div>
+
+</body>
+</html>
