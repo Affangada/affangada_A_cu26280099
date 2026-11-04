@@ -1,0 +1,43 @@
+Q17–Q19: APACHE CLEAN URLS, HTTPS, SSL AND VIRTUAL HOST (XAMPP WINDOWS)
+
+1) Enable Apache modules in httpd.conf:
+   LoadModule rewrite_module modules/mod_rewrite.so
+   LoadModule ssl_module modules/mod_ssl.so
+   Include conf/extra/httpd-ssl.conf
+   Include conf/extra/httpd-vhosts.conf
+
+2) Create a local self-signed certificate (OpenSSL terminal):
+   openssl req -x509 -nodes -days 365 -newkey rsa:2048 ^
+     -keyout C:/xampp/apache/conf/myproject.key ^
+     -out C:/xampp/apache/conf/myproject.crt
+
+3) Add to C:/xampp/apache/conf/extra/httpd-vhosts.conf:
+   <VirtualHost *:80>
+     ServerName myproject.local
+     DocumentRoot "C:/xampp/htdocs/MCA108P_AS10_Solutions/public"
+     <Directory "C:/xampp/htdocs/MCA108P_AS10_Solutions/public">
+       AllowOverride All
+       Require all granted
+     </Directory>
+     ErrorLog "C:/xampp/apache/logs/myproject-error.log"
+   </VirtualHost>
+   <VirtualHost *:443>
+     ServerName myproject.local
+     DocumentRoot "C:/xampp/htdocs/MCA108P_AS10_Solutions/public"
+     SSLEngine on
+     SSLCertificateFile "C:/xampp/apache/conf/myproject.crt"
+     SSLCertificateKeyFile "C:/xampp/apache/conf/myproject.key"
+     <Directory "C:/xampp/htdocs/MCA108P_AS10_Solutions/public">
+       AllowOverride All
+       Require all granted
+     </Directory>
+   </VirtualHost>
+
+4) Edit Windows hosts file as Administrator:
+   C:/Windows/System32/drivers/etc/hosts
+   Add: 127.0.0.1 myproject.local
+
+5) Restart Apache and visit https://myproject.local.
+   Browser warning is expected for a self-signed development certificate.
+   Uncomment HTTPS redirect rules in public/.htaccess only after SSL works.
+   For Linux, use /etc/hosts and your distribution's Apache config paths.

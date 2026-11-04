@@ -1,0 +1,9 @@
+<!DOCTYPE html><html><head><title>Live Product Search</title></head><body>
+<h2>Live Product Search</h2><input id="term" placeholder="Search product name">
+<div id="results"></div>
+<script>
+document.getElementById('term').addEventListener('input',async function(){
+ const response=await fetch('Q20_search.php?q='+encodeURIComponent(this.value));
+ document.getElementById('results').innerHTML=await response.text();
+});
+</script></body></html>

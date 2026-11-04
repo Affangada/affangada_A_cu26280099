@@ -1,0 +1,2 @@
+<!doctype html><html><head><meta charset="utf-8"><title><?=e($title ?? 'Lab 10')?></title></head><body>
+<header><h1>Lab 10 Store</h1><nav><a href="index.php">Home</a> | <a href="index.php?r=products">Products</a></nav></header><main>

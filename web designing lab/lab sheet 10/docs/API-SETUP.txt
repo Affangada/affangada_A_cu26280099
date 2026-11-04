@@ -1,0 +1,16 @@
+Q7–Q8: API TOKEN SETUP AND METHODS
+1. Register a user in the users table (password should be password_hash()).
+2. Generate a random token in PHP:
+   $token = bin2hex(random_bytes(32));
+3. Store only its hash:
+   INSERT INTO api_tokens(user_id, token_hash) VALUES (?, ?)
+   with hash('sha256', $token).
+4. Keep the original token secret. For a local test, send it as:
+   Authorization: Bearer YOUR_TOKEN
+5. GET /api/products.php          list products
+   GET /api/products.php?id=1     one product
+   POST /api/products.php         JSON {"name":"Book","price":99}
+   PUT /api/products.php          JSON {"id":1,"name":"Book","price":120}
+   DELETE /api/products.php       JSON {"id":1}
+6. Use HTTPS. Do not hardcode production tokens in browser JavaScript;
+   use a server-side proxy or short-lived user token instead.

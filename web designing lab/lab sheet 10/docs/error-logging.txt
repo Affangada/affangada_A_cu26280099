@@ -1,0 +1,7 @@
+Q16: ERROR PAGES AND LOGGING
+- public/index.php catches exceptions, writes details with error_log(), and shows a
+  generic 500 page. Unknown routes show the custom 404 page.
+- config/config.php sets display_errors=0 and enables error logging.
+- Ensure storage/logs is writable by the web-server user.
+- In Apache VirtualHost, configure ErrorLog to a protected log file.
+- Never show stack traces, SQL errors or credentials to visitors.

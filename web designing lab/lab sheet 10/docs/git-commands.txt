@@ -1,0 +1,24 @@
+Q1–Q2: GIT INITIALIZATION, COMMITS, BRANCH, MERGE CONFLICT AND GITHUB
+
+git init
+git add .
+git commit -m "Initial project structure"
+git status
+git switch -c feature/product-page
+# Make a change to README.txt
+git add README.txt
+git commit -m "Add product page notes"
+git switch main
+# Make a different change to the same README line and commit it
+git add README.txt
+git commit -m "Update project notes"
+git merge feature/product-page
+# If conflict occurs, open conflicted file, choose/edit final content,
+# remove <<<<<<<, =======, >>>>>>> markers, then:
+git add README.txt
+git commit -m "Resolve merge conflict"
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+git push -u origin main
+git push -u origin feature/product-page
+
+Use `git branch -M main` if your initial branch is named master.

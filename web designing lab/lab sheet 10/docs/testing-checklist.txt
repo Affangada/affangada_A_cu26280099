@@ -1,0 +1,21 @@
+Q1–Q20 TESTING CHECKLIST
+[ ] Initialize Git, commit in steps, create branch, resolve merge conflict and push.
+[ ] MVC folders load correctly and router maps products/product routes.
+[ ] Database singleton connects; Product model CRUD methods work.
+[ ] Header, footer and navigation templates display.
+[ ] API GET/POST/PUT/DELETE work with a valid Bearer token.
+[ ] Missing/invalid API token returns HTTP 401.
+[ ] JavaScript fetch displays API JSON.
+[ ] CSRF form accepts valid token and rejects invalid token.
+[ ] Session cookie has HttpOnly, SameSite and HTTPS Secure flag when HTTPS is active.
+[ ] Login regenerates session ID after successful authentication.
+[ ] Email, URL, integer and string validation examples work.
+[ ] Five failed logins lock the account for 15 minutes.
+[ ] Password reset token expires after 30 minutes and is one-time use.
+[ ] PHPMailer sends through configured SMTP credentials.
+[ ] Upload rejects oversized/unsupported files and stores random filenames outside public.
+[ ] Unknown route gives 404; exception gives generic 500 and logs details.
+[ ] Clean URL rewrite works; directory listing is disabled.
+[ ] Local HTTPS certificate works; self-signed warning is expected.
+[ ] myproject.local resolves to localhost using hosts file.
+[ ] Application connects using limited MySQL account, not root.

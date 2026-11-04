@@ -1,0 +1,29 @@
+CREATE DATABASE IF NOT EXISTS lab10_app CHARACTER SET utf8mb4;
+USE lab10_app;
+
+CREATE TABLE products (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(150) NOT NULL,
+ price DECIMAL(10,2) NOT NULL DEFAULT 0,
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ name VARCHAR(100) NOT NULL,
+ email VARCHAR(190) NOT NULL UNIQUE,
+ password VARCHAR(255) NOT NULL,
+ failed_attempts INT NOT NULL DEFAULT 0,
+ locked_until DATETIME NULL,
+ reset_hash CHAR(64) NULL,
+ reset_expires DATETIME NULL
+);
+
+CREATE TABLE api_tokens (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ user_id INT NOT NULL,
+ token_hash CHAR(64) NOT NULL UNIQUE,
+ FOREIGN KEY(user_id) REFERENCES users(id)
+);
+
+INSERT INTO products(name,price) VALUES ('Notebook',50),('Pen',10),('PHP Guide',350);
