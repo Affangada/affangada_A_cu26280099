@@ -1,0 +1,1 @@
+<?php require "00-db.php"; $_SESSION=[]; session_destroy(); header("Location: 05-auth.php"); exit; ?>

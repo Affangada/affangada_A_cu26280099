@@ -1,0 +1,14 @@
+END-TO-END TESTING CHECKLIST
+1. Open homepage and confirm navigation and featured section.
+2. Browse books and open a book detail page.
+3. Search by title, author and category.
+4. Register a new customer and log in.
+5. Add a book to cart, change quantity and remove an item.
+6. Try adding more copies than stock; the stock check should block it.
+7. Checkout with a shipping address and confirm an order is saved.
+8. Open invoice and order history; check order status.
+9. Log in as admin and test adding/updating books.
+10. Update an order from Pending to Shipped/Delivered.
+11. Submit a review and save a book to wishlist.
+12. Check pagination and sales report.
+Expected result: each action completes without SQL errors and data is saved correctly.
