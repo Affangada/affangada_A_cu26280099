@@ -1,0 +1,6 @@
+*{box-sizing:border-box} body{font-family:Arial;margin:0}
+nav{display:flex;justify-content:space-around;align-items:center;background:#222;padding:15px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:8px}
+.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.card{flex:1 1 220px;padding:20px;border:1px solid #ccc;border-radius:8px}
+@media(max-width:600px){nav{flex-direction:column}.cards{flex-direction:column}}

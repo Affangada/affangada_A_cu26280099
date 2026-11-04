@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><title>Contact Form</title></head><body><form id="contact">
+<input id="name" placeholder="Name"><input id="email" placeholder="Email"><textarea id="message" placeholder="Message"></textarea><button>Submit</button></form>
+<p id="result"></p><script>
+document.getElementById('contact').addEventListener('submit',e=>{e.preventDefault();
+let n=name.value.trim(), em=email.value.trim(), m=message.value.trim();
+if(!n||!m||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) result.textContent='Enter valid name, email and message.';
+else result.textContent='Form submitted successfully.';});
+</script></body></html>

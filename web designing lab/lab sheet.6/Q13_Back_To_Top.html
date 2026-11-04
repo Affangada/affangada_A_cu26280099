@@ -1,0 +1,4 @@
+<!DOCTYPE html><html><head><title>Back to Top</title><style>body{height:1500px;font-family:Arial}#top{display:none;position:fixed;bottom:20px;right:20px;padding:12px}</style></head>
+<body><h2>Scroll Down</h2><button id="top">Back to Top</button><script>
+window.addEventListener('scroll',()=>top.style.display=window.scrollY>200?'block':'none');
+top.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));</script></body></html>

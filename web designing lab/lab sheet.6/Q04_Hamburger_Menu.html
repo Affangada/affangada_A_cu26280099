@@ -1,0 +1,5 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Menu</title><style>
+nav{background:#222;padding:15px}nav a{color:white;margin:12px;text-decoration:none}.menu{display:none}
+@media(max-width:600px){.menu{display:block;color:white;background:#444;padding:8px}.links{display:none}.links.show{display:flex;flex-direction:column}}
+</style></head><body><nav><button class="menu" id="toggle">☰ Menu</button><div class="links" id="links"><a href="#">Home</a><a href="#">About</a><a href="#">Contact</a></div></nav>
+<script>document.getElementById('toggle').addEventListener('click',()=>document.getElementById('links').classList.toggle('show'));</script></body></html>

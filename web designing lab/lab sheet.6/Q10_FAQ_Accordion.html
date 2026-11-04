@@ -1,0 +1,4 @@
+<!DOCTYPE html><html><head><title>FAQ</title><style>.answer{display:none;padding:10px;background:#eee}.question{cursor:pointer;padding:12px;background:#ddd;margin:4px}</style></head><body>
+<h2>Frequently Asked Questions</h2><div class="question">What is HTML?</div><div class="answer">HTML structures web pages.</div>
+<div class="question">What is CSS?</div><div class="answer">CSS styles web pages.</div>
+<script>document.querySelectorAll('.question').forEach(q=>q.addEventListener('click',()=>{let a=q.nextElementSibling;a.style.display=a.style.display==='block'?'none':'block';}));</script></body></html>

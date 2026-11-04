@@ -1,0 +1,3 @@
+<!DOCTYPE html><html><head><title>Testimonials</title></head><body><h2>Testimonials</h2><p id="quote"></p><button id="next">Next</button>
+<script>const reviews=['Great service!','Very useful website.','Excellent experience.'];let i=0;function show(){quote.textContent=reviews[i];}
+show();next.addEventListener('click',()=>{i=(i+1)%reviews.length;show();});</script></body></html>

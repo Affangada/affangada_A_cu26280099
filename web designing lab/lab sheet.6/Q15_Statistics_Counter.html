@@ -1,0 +1,4 @@
+<!DOCTYPE html><html><head><title>Counter</title><style>body{height:1000px}.stats{margin-top:500px;font-size:30px}</style></head><body>
+<div class="stats"><span id="count">0</span> Projects Completed</div><script>
+let started=false;const el=document.getElementById('count');const observer=new IntersectionObserver(entries=>{if(entries[0].isIntersecting&&!started){started=true;let n=0;let timer=setInterval(()=>{el.textContent=++n;if(n>=100)clearInterval(timer);},20);}});
+observer.observe(document.querySelector('.stats'));</script></body></html>
